@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using AdventureLearn.Models;
 using AdventureLearn.Services;
+using System.Reflection;
+using System.IO;
 
 namespace AdventureLearn.App
 {
@@ -18,7 +20,16 @@ namespace AdventureLearn.App
 
         private async void OnLogin(object sender, EventArgs e)
         {
-            User user = await UserService.GetUser(email.Text);
+            var assembly = typeof(AdventureLearn).GetTypeInfo().Assembly;
+           
+            Stream audioStream = assembly.GetManifestResourceStream("AdventureLearn.Sounds." + "button.mp3");
+            
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load(audioStream);
+
+            player.Play();
+
+            User user = await UserService.GetUser("joe@test.com");
 
             if (user != null)
             {

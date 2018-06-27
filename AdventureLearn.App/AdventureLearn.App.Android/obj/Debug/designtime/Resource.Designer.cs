@@ -26,6 +26,8 @@ namespace AdventureLearn.App.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microcharts.Droid.Resource.String.library_name = global::AdventureLearn.App.Droid.Resource.String.library_name;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::AdventureLearn.App.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "538172febb7891a16a382e3040f66d65541e3d51"
+    "signature": "d627986aede64de954d15485e059d0bd8f07d9e9"
   },
   "compilationOptions": {},
   "targets": {
@@ -15,6 +15,7 @@
           "NETStandard.Library": "2.0.1",
           "Nito.AsyncEx": "4.0.1",
           "XFControls": "1.0.0.6",
+          "Xam.Plugin.SimpleAudioPlayer": "1.1.0",
           "Xamarin.Forms": "3.0.0.482510"
         },
         "runtime": {
@@ -99,6 +100,15 @@
         }
       },
       "System.ValueTuple/4.4.0": {},
+      "Xam.Plugin.SimpleAudioPlayer/1.1.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll": {}
+        }
+      },
       "Xamarin.Forms/3.0.0.482510": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -221,6 +231,13 @@
       "sha512": "sha512-BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
       "path": "system.valuetuple/4.4.0",
       "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fLcJ9SKPAzUaNVP+UCV4haLMXMJWI6g5qApT6fjBKbMwdP4OmEA3R+UVKIIgrnzvQ3O3uVie8DO0mxBXAop3xA==",
+      "path": "xam.plugin.simpleaudioplayer/1.1.0",
+      "hashPath": "xam.plugin.simpleaudioplayer.1.1.0.nupkg.sha512"
     },
     "Xamarin.Forms/3.0.0.482510": {
       "type": "package",

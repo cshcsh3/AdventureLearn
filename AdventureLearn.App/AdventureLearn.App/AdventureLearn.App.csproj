@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon />
+    <Win32Resource />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microcharts" Version="0.7.1" />
     <PackageReference Include="Microcharts.Forms" Version="0.7.1" />
     <PackageReference Include="Nito.AsyncEx" Version="4.0.1" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
     <PackageReference Include="XFControls" Version="1.0.0.6" />
   </ItemGroup>

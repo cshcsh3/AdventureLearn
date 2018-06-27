@@ -16,6 +16,8 @@ C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.A
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Nito.AsyncEx.Concurrent.dll
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Nito.AsyncEx.dll
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Nito.AsyncEx.Enlightenment.dll
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Plugin.SimpleAudioPlayer.dll
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\SkiaSharp.dll
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\SkiaSharp.Views.Android.dll
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\SkiaSharp.Views.Forms.dll

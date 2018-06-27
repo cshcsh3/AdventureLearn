@@ -120,6 +120,8 @@ class MonoPackageManager_Resources {
 		"Nito.AsyncEx.Concurrent.dll",
 		"Nito.AsyncEx.dll",
 		"Nito.AsyncEx.Enlightenment.dll",
+		"Plugin.SimpleAudioPlayer.Abstractions.dll",
+		"Plugin.SimpleAudioPlayer.dll",
 		"SkiaSharp.dll",
 		"SkiaSharp.Views.Android.dll",
 		"SkiaSharp.Views.Forms.dll",

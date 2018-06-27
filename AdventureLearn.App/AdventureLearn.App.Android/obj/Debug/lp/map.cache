@@ -45,3 +45,6 @@ SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms
 System.Collections
+AudioManager.Droid
+Plugin.SimpleAudioPlayer.Abstractions
+Plugin.SimpleAudioPlayer

@@ -216,7 +216,14 @@ C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.A
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\System.Xml.pdb
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\Xamarin.Forms.Core.pdb
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\Xamarin.Forms.Xaml.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\bin\Debug\Plugin.SimpleAudioPlayer.dll.mdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\Plugin.SimpleAudioPlayer.dll.mdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Plugin.SimpleAudioPlayer.dll.mdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\android\assets\Plugin.SimpleAudioPlayer.Abstractions.pdb
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\bin\Debug\AdventureLearn.App.Android.dll
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\AdventureLearn.App.Android.dll.mdb
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\Plugin.SimpleAudioPlayer.dll.mdb
 C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.App\AdventureLearn.App.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
