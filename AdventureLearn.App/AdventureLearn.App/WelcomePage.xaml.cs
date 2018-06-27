@@ -3,7 +3,9 @@ using AdventureLearn.Services;
 using Nito.AsyncEx;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,14 +17,11 @@ namespace AdventureLearn.App
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class WelcomePage : ContentPage
 	{
-        private readonly String name;
-
-		public WelcomePage (String name)
+		public WelcomePage (User user)
 		{
 			InitializeComponent ();
-            this.name = name;
 
-            WelcomeLabel.Text = "Welcome, " + name + "!";
+            WelcomeLabel.Text = "Welcome, " + user.Name + "!";
 
             // Populate surveys to listview
             var surveys = AsyncContext.Run(SurveyService.GetSurveys);
@@ -36,6 +35,15 @@ namespace AdventureLearn.App
             SurveyListView.ItemsSource = tableItems;
 
             SurveyListView.ItemSelected += async (sender, e) => {
+                // Play sound effect
+                var assembly = typeof(AdventureLearn).GetTypeInfo().Assembly;
+                Stream audioStream = assembly.GetManifestResourceStream("AdventureLearn.Sounds." + "button.mp3");
+
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load(audioStream);
+
+                player.Play();
+
                 if (e.SelectedItem == null)
                     return;
                 SurveyListView.SelectedItem = null; // deselect row
@@ -44,7 +52,7 @@ namespace AdventureLearn.App
                 string no = selectedItem.Split(' ')[0];
 
                 Survey survey = await SurveyService.GetSurvey(no);
-                await Navigation.PushAsync(new SurveyPage(survey));
+                await Navigation.PushAsync(new SurveyPage(survey, user));
             };
 
         }

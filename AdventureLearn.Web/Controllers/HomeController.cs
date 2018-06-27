@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AdventureLearn.Web.Models;
+using AdventureLearn.Models;
+using AdventureLearn.Services;
 
 namespace AdventureLearn.Web.Controllers
 {
@@ -15,20 +17,29 @@ namespace AdventureLearn.Web.Controllers
             return View();
         }
 
-        public IActionResult About()
+        // TODO: Account authentication
+        [HttpPost]
+        public async Task<IActionResult> Login(User values)
         {
-            ViewData["Message"] = "Your application description page.";
+            User user = await UserService.GetUser(values.Email);
 
-            return View();
+            if (user != null)
+            {
+                ViewBag.name = user.Name;
+                var model = new List<Survey>();
+                var surveys = await SurveyService.GetSurveys();
+
+                for (var i = 0; i < surveys.Count; i++)
+                {
+                    model.Add(surveys[i]);
+                }
+
+                return View("~/Views/Survey/Welcome.cshtml", model);
+            }
+            
+            return View("Index");
         }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
+        
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

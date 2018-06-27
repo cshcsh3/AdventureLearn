@@ -3,7 +3,9 @@ using AdventureLearn.Models;
 using AsNum.XFControls;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,13 +18,15 @@ namespace AdventureLearn.App
 	public partial class SurveyPage : ContentPage
 	{
         private readonly Survey survey;
+        private readonly User user;
         Dictionary<int, RadioGroup> selectedRadioGroups = new Dictionary<int, RadioGroup>();
         Dictionary<int, String> selectedOptions = new Dictionary<int, String>();
 
-        public SurveyPage (Survey survey)
+        public SurveyPage (Survey survey, User user)
 		{
 			InitializeComponent ();
             this.survey = survey;
+            this.user = user;
 
             TitleLabel.Text = survey.Title;
 
@@ -51,6 +55,15 @@ namespace AdventureLearn.App
 
         async void OnSurveySubmit(object sender, EventArgs e)
         {
+            // Play sound effect
+            var assembly = typeof(AdventureLearn).GetTypeInfo().Assembly;
+            Stream audioStream = assembly.GetManifestResourceStream("AdventureLearn.Sounds." + "button.mp3");
+
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load(audioStream);
+
+            player.Play();
+
             // Converts RadioGroup to String as a dictionary
             foreach (KeyValuePair<int, RadioGroup> entry in selectedRadioGroups)
             {
@@ -64,7 +77,7 @@ namespace AdventureLearn.App
             }
 
             GenerateResult generateResult = new GenerateResult(selectedOptions);
-            await Navigation.PushAsync(new ResultsPage(generateResult.GetGritScore()));
+            await Navigation.PushAsync(new ResultsPage(generateResult, user));
         }
     }
 }

@@ -16,14 +16,15 @@ namespace AdventureLearn.App
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+        }
 
+        // TODO: Account authentication
         private async void OnLogin(object sender, EventArgs e)
         {
+            // Play sound effect
             var assembly = typeof(AdventureLearn).GetTypeInfo().Assembly;
-           
             Stream audioStream = assembly.GetManifestResourceStream("AdventureLearn.Sounds." + "button.mp3");
-            
+
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load(audioStream);
 
@@ -33,7 +34,7 @@ namespace AdventureLearn.App
 
             if (user != null)
             {
-                await Navigation.PushAsync(new WelcomePage(user.Name));
+                await Navigation.PushAsync(new WelcomePage(user));
             }
         }
     }

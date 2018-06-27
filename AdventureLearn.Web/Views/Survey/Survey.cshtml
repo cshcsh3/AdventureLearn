@@ -1,0 +1,44 @@
+﻿@model AdventureLearn.Models.Survey;
+
+@{
+    ViewData["Title"] = "Survey";
+
+    var i = 0;
+    var j = 0;
+}
+
+<h2>Survey</h2>
+<h3>@Model.Title</h3>
+<hr />
+
+@using (Html.BeginForm("SubmitSurvey", "Survey", new { id = Model.No }))
+{
+    foreach (var question in Model.Questions)
+    {
+        i++;
+        var qns = "qns" + i;
+
+        <p>@i.  @question.Qns</p>
+
+        foreach (var options in question.Options)
+        {
+            j++;
+            var opt = "opt" + j;
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="@qns" id="@opt" value="@options">
+                <label class="form-check-label" for="@opt">
+                    @options
+                </label>
+            </div>
+        }
+        <br />
+    }
+
+    <br />
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    </div>
+}
+
+

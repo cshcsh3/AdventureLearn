@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AdventureLearn.Models.Survey>
+
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome</h2>
+<h3>Hello @ViewBag.name!</h3>
+
+<p>Select a survey: </p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Survey</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.No</td>
+                    <td>@item.Title</td>
+                    <td><input type="button" class="btn btn-primary" value="Take Survey" onclick="location.href='@Url.Action("TakeSurvey", "Survey", new { id = item.No })'"/></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+
+
+

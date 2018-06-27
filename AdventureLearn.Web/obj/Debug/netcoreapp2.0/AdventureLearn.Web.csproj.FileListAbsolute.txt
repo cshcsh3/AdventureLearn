@@ -9,3 +9,17 @@ C:\Users\csh\source\repos\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp
 C:\Users\csh\source\repos\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.AssemblyInfo.cs
 C:\Users\csh\source\repos\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.dll
 C:\Users\csh\source\repos\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.Web.deps.json
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.Web.runtimeconfig.json
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.Web.runtimeconfig.dev.json
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.Web.dll
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.Web.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.csprojAssemblyReference.cache
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.csproj.CoreCompileInputs.cache
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.AssemblyInfoInputs.cache
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.AssemblyInfo.cs
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.dll
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.dll
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\bin\Debug\netcoreapp2.0\AdventureLearn.pdb
+C:\Users\csh\Documents\GitHub\AdventureLearn\AdventureLearn.Web\obj\Debug\netcoreapp2.0\AdventureLearn.Web.csproj.CopyComplete

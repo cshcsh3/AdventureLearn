@@ -1,9 +1,13 @@
-﻿using Microcharts;
+﻿using AdventureLearn.Data;
+using AdventureLearn.Models;
+using Microcharts;
 using Microcharts.Forms;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,14 +19,12 @@ namespace AdventureLearn.App
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ResultsPage : ContentPage
 	{
-        private readonly float score;
-
-		public ResultsPage (float score)
+        public ResultsPage (GenerateResult generateResult, User user)
 		{
 			InitializeComponent ();
-            this.score = score;
-
-            MessageLabel.Text = GetGritMessage(score);
+            float score = generateResult.GetGritScore();
+        
+            MessageLabel.Text = generateResult.GetGritMessage();
 
             // Prepare data for chart
             var entries = new[]
@@ -64,34 +66,28 @@ namespace AdventureLearn.App
 
             ResultsStack.Children.Add(chartView);
 
-        }
+            Button doneButton = new Button
+            {
+                Text = "Done",
+                FontSize = 16,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
 
-        private string GetGritMessage(double gritScore)
-        {
-            if (gritScore > 4.5)
-            {
-                return "The power of the grit is within you!";
-            }
-            else if (gritScore > 4.0 && gritScore < 4.5)
-            {
-                return "You have a great grit on things!";
-            }
-            else if (gritScore > 3.5 && gritScore < 4.0)
-            {
-                return "You have a good grit on things!";
-            }
-            else if (gritScore > 3.0 && gritScore < 3.5)
-            {
-                return "You have a grit on things!";
-            }
-            else if (gritScore > 2.0 && gritScore < 3.0)
-            {
-                return "The grit is there, but needs a bit more...";
-            }
-            else
-            {
-                return "Missing a lot of grittiness!";
-            }
+            doneButton.Clicked += async (sender, e) => {
+                // Play sound effect
+                var assembly = typeof(AdventureLearn).GetTypeInfo().Assembly;
+                Stream audioStream = assembly.GetManifestResourceStream("AdventureLearn.Sounds." + "button.mp3");
+
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load(audioStream);
+
+                player.Play();
+
+                await Navigation.PushAsync(new WelcomePage(user));
+            };
+
+            ResultsStack.Children.Add(doneButton);
         }
     }
 }

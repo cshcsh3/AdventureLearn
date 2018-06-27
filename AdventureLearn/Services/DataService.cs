@@ -14,8 +14,9 @@ namespace AdventureLearn.Services
             // Handler needed for web
             HttpClientHandler handler = new HttpClientHandler();
             HttpClient client = new HttpClient(handler);
-
-            client.BaseAddress = new Uri("https://3f9cf8bd.ngrok.io");
+            
+            client.BaseAddress = new Uri("http://localhost:56163/");
+            //client.BaseAddress = new Uri("https://8a0615c6.ngrok.io/");
             var response = await client.GetAsync("api/" + queryString);
 
             dynamic data = null;
