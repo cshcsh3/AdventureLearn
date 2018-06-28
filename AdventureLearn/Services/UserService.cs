@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.CSharp;
+using Newtonsoft.Json.Linq;
 
 namespace AdventureLearn.Services
 {
@@ -21,6 +22,14 @@ namespace AdventureLearn.Services
                 User user = new User();
                 user.Name = (string)results["name"];
                 user.Email = (string)results["email"];
+
+                JArray stats = (JArray)results["stat"];
+                user.Stat = new float[stats.Count];
+
+                for (int i = 0; i < stats.Count; i++)
+                {
+                    user.Stat[i] = (float)stats[i];
+                }
 
                 return user;
             }

@@ -76,7 +76,7 @@ namespace AdventureLearn.App
                 }
             }
 
-            GenerateResult generateResult = new GenerateResult(selectedOptions);
+            GenerateResult generateResult = new GenerateResult(selectedOptions, survey.Set);
             await Navigation.PushAsync(new ResultsPage(generateResult, user));
         }
     }

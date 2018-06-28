@@ -24,17 +24,15 @@ namespace AdventureLearn.Services
                 {
                     surveys.Add(AssignSurvey(r));
                 }
-
                 return surveys;
             }
-
             return null;
         }
 
         // Get a survey based on number
-        public static async Task<Survey> GetSurvey(string no)
+        public static async Task<Survey> GetSurvey(string id)
         {
-            string queryString = "Survey/" + no;
+            string queryString = "Survey/" + id;
 
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
@@ -54,7 +52,9 @@ namespace AdventureLearn.Services
             Survey survey = new Survey();
             List<Question> questions = new List<Question>();
             survey.No = (string)results["no"];
+            survey.Set = (string)results["set"];
             survey.Title = (string)results["title"];
+            survey.Type = (string)results["type"];
 
             foreach (var qns in results["questions"])
             {

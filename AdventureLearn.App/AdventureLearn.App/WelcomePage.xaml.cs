@@ -49,9 +49,9 @@ namespace AdventureLearn.App
                 SurveyListView.SelectedItem = null; // deselect row
 
                 string selectedItem = (string)e.SelectedItem;
-                string no = selectedItem.Split(' ')[0];
+                string id = selectedItem.Split(' ')[0];
 
-                Survey survey = await SurveyService.GetSurvey(no);
+                Survey survey = await SurveyService.GetSurvey(id);
                 await Navigation.PushAsync(new SurveyPage(survey, user));
             };
 

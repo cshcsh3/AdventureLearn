@@ -19,5 +19,8 @@ namespace AdventureLearn.WebAPI.Models
 
         [BsonElement("password")]
         public string Password { get; set; }
+
+        [BsonElement("stat")]
+        public float[] Stat { get; set; }
     }
 }

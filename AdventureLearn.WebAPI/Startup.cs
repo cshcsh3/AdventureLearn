@@ -26,6 +26,7 @@ namespace AdventureLearn.WebAPI
         {
             services.AddTransient<SurveyService>();
             services.AddTransient<UserService>();
+            services.AddTransient<RatingService>();
             services.AddMvc();
         }
 

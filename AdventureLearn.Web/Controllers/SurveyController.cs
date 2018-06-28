@@ -51,10 +51,26 @@ namespace AdventureLearn.Web.Controllers
                 selectedOptions.Add(j, Request.Form[radio]);
                 j++;
             }
+            
+            GenerateResult generateResult = new GenerateResult(selectedOptions, survey.Set);
+            float score = await generateResult.GetScore();
 
-            GenerateResult generateResult = new GenerateResult(selectedOptions);
-            ViewBag.score = generateResult.GetGritScore();
-            ViewBag.message = generateResult.GetGritMessage();
+            switch (survey.Type)
+            {
+                case "openness":
+                    break;
+                case "conscientiousness":
+                    break;
+                case "extraversion":
+                    break;
+                case "agreeableness":
+                    break;
+                case "neuroticism":
+                    break;
+            }
+
+            ViewBag.score = score;
+            ViewBag.message = generateResult.GetMessage(score);
 
             return View("Result");
         }

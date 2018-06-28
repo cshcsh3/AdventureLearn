@@ -2,6 +2,7 @@
 using AdventureLearn.Models;
 using Microcharts;
 using Microcharts.Forms;
+using Nito.AsyncEx;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
@@ -22,36 +23,42 @@ namespace AdventureLearn.App
         public ResultsPage (GenerateResult generateResult, User user)
 		{
 			InitializeComponent ();
-            float score = generateResult.GetGritScore();
+            float score = AsyncContext.Run(generateResult.GetScore);
         
-            MessageLabel.Text = generateResult.GetGritMessage();
+            MessageLabel.Text = generateResult.GetMessage(score);
 
             // Prepare data for chart
             var entries = new[]
             {
                 new Microcharts.Entry(score)
                 {
-                    Label = "Grit",
+                    Label = "Openness",
                     ValueLabel = score.ToString(),
                     Color = SKColor.Parse("#2c3e50")
                 },
                 new Microcharts.Entry(2)
                 {
-                    Label = "Some Stat",
+                    Label = "Conscientiousness",
                     ValueLabel = "2",
                     Color = SKColor.Parse("#77d065")
                 },
                 new Microcharts.Entry(3)
                 {
-                    Label = "Some Stat",
+                    Label = "Extraversion",
                     ValueLabel = "3",
                     Color = SKColor.Parse("#b455b6")
                 },
                 new Microcharts.Entry(4)
                 {
-                    Label = "Some Stat",
+                    Label = "Agreeableness",
                     ValueLabel = "4",
                     Color = SKColor.Parse("#3498db")
+                },
+                new Microcharts.Entry(5)
+                {
+                    Label = "Neuroticism",
+                    ValueLabel = "5",
+                    Color = SKColor.Parse("#d42f2f")
                 }
             };
 
